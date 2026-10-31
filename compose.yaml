@@ -1,0 +1,6 @@
+services:
+  api:
+    build: .
+    image: mlops-lab2:local
+    ports:
+      - "8000:8000"
