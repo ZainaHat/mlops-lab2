@@ -21,7 +21,7 @@ FEATURES = NUMERIC + CATEGORICAL
 
 def train():
     df = pd.read_csv(
-        ROOT / "churn_v1.csv",
+        ROOT  / "data" / "churn_v1.csv",
         keep_default_na=False,
     )
     X = df[FEATURES]
