@@ -13,6 +13,7 @@ COPY data/churn_v1.csv ./data/churn_v1.csv
 RUN python -m src.train.train
 
 FROM python@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337 AS runtime
+RUN apt-get update && apt-get install -y --only-upgrade apt && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
