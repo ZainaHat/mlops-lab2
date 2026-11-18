@@ -49,7 +49,7 @@ jobs:
           BATCH="${GITHUB_SHA::7}" python -m src.train.train_mlflow
 
       - name: Promotion gate (exit code 1 = blocked)
-        run: python scripts/promote.py --champion-file "$RUNNER_TEMP/champion.json"
+        run: python scripts/promote.py --champion-file artifacts/champion.json
 
       - name: Summary
         if: always()
